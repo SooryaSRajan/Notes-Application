@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    tools:context=".NoteActivity">
+
+    <EditText
+        android:maxLength="8"
+        android:inputType="textCapWords"
+        android:textCursorDrawable="@drawable/curson_color"
+        android:layout_toStartOf="@+id/title_button"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:padding="15dp"
+        android:textColor="#FFEB3B"
+        android:imeOptions="actionNext"
+        android:background="@color/colorAccent"
+        android:id="@+id/note_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+    <ImageButton
+        android:padding="10dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/ic_check_black_text_24dp"
+        android:id="@+id/title_button"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_margin="8dp"
+        android:paddingEnd="5dp"
+        android:textColor="#595959"
+        android:id="@+id/date_time_text"
+        android:layout_below="@+id/note_title"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"/>
+
+    <EditText
+        android:inputType="textCapSentences"
+        android:textCursorDrawable="@drawable/curson_color"
+        android:padding="15dp"
+        android:gravity="top|left"
+        android:textColor="#FFFFFF"
+        android:hint="Type Something..."
+        android:textColorHint="#68FFC107"
+        android:id="@+id/note_text"
+        android:layout_below="@+id/date_time_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save"
+        android:layout_margin="16dp"
+        android:padding="20dp"
+        android:backgroundTint="#FFC107"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_check_black_24dp"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

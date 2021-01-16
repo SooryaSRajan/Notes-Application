@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_margin="15dp"
+        android:background="@drawable/rectangle_search"
+        android:id="@+id/search_view"
+        android:queryHint="Search Here"
+        android:iconifiedByDefault="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <GridView
+        android:numColumns="2"
+        android:layout_below="@+id/search_view"
+        android:id="@+id/note_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_margin="16dp"
+        android:padding="20dp"
+        android:backgroundTint="#FFEB3B"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/add_note_icon"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
